@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function getNamen() {
+      var namen = prompt("Hoeveel namen wilt u in de array stoppen? (minimaal 3 en split met commas)")
+      const splitNamen = namen.split(",");
+      if (splitNamen < 3) {
+        getNamen()
+      } else {
+        return splitNamen
+      }
+    }
+    getNamen()</script>
+</head>
+
+<body>
+  <h2>De ingevoerde namen in de array zijn:</h2>
+  <p id="namen">
+    <script>
+      const namen = splitNamen;
+      document.getElementById("namen").innerHTML = namen;</script>
+  </p>
+
+  <h2>De ingevoerde namen in de array in omgekeerde volgorde zijn:</h2>
+  <p id="namenomgekeerd">
+    <script>
+      const namenomgekeerd = splitNamen.reverse();
+      document.getElementById("namenomgekeerd").innerHTML = namenomgekeerd;</script>
+  </p>
+</body>
+
+</html>

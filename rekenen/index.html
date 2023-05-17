@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function optellen(arrayEen, arrayTwee) {
+            var totaal = arrayEen + arrayTwee
+            return totaal
+        }
+        function aftrekken(arrayEen, arrayTwee) {
+            var totaal = arrayEen - arrayTwee
+            return totaal
+        }
+        function vermenigvuldigen(arrayEen, arrayTwee) {
+            var totaal = arrayEen * arrayTwee
+            return totaal
+        }
+        function delen(arrayEen, arrayTwee) {
+            var totaal = arrayEen / arrayTwee
+            return totaal
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Array Operatoren</h1>
+    <h2>Optellen van de twee arrays zijn:</h2>
+    <p id="optellen">
+        <script>
+            const optellenequations = []
+            for (let i = 1; i < 11; i++) {
+                optellenequations[i] = optellen(i, i * 2);
+            }
+            document.getElementById("optellen").innerHTML = optellenequations</script>
+    </p>
+    <h2>Aftrekken van de twee arrays zijn:</h2>
+    <p id="aftrekken">
+        <script>
+            const aftrekkenequations = []
+            for (let i = 1; i < 11; i++) {
+                aftrekkenequations[i] = aftrekken(i * 2, i);
+            }
+            document.getElementById("aftrekken").innerHTML = aftrekkenequations</script>
+    </p>
+    <h2>Vermenigvuldigen van de twee arrays zijn:</h2>
+    <p id="vermenigvuldigen">
+        <script>
+            const vermenigvuldigenequations = []
+            for (let i = 1; i < 11; i++) {
+                vermenigvuldigenequations[i] = vermenigvuldigen(i, i * 2);
+            }
+            document.getElementById("vermenigvuldigen").innerHTML = vermenigvuldigenequations</script>
+    </p>
+    <h2>Delen van de twee arrays zijn:</h2>
+    <p id="delen">
+        <script>
+            const delenequations = []
+            for (let i = 1; i < 11; i++) {
+                delenequations[i] = delen(i * 2, i);
+            }
+            document.getElementById("delen").innerHTML = delenequations</script>
+    </p>
+</body>
+
+</html>

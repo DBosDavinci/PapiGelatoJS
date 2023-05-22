@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function getNumber() {
+            var getal = prompt("Voer een getal in:")
+            return getal
+        }
+
+        function displayNumbers(nummer) {
+            document.write(nummer, "<br>")
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Pyramide oplopend</h2>
+    <p id="array">
+        <script>
+            const getal = getNumber();
+            const nummers = []
+            for (let i = getal; i > 0; i--) {
+                nummers.push(i)
+            }
+            console.log(nummers)
+            document.getElementById("array").innerHTML = "Array : " + nummers;</script>
+    </p>
+    <script>
+        nummers.forEach(displayNumbers)
+    </script>
+</body>
+
+</html>

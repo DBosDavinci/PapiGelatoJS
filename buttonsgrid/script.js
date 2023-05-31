@@ -7,8 +7,19 @@ function genBtn(number) {
     btn.style.height = "100px";
     btn.style.width = "175px";
     btn.addEventListener('click', () => {
-        btn.style.background = "red";
+        if (btn.style.background == "green") {
+            btn.style.background = "red";
+        } else if (btn.style.background == "red") {
+            btn.style.background = "purple";
+        } else if (btn.style.background == "purple") {
+            btn.style.background = "blue";
+        } else if (btn.style.background == "blue") {
+            btn.style.background = "black";
+        } else if (btn.style.background == "black") {
+            btn.remove()
+        }
     })
+
     document.getElementById("container").appendChild(btn);
     return btn
 }

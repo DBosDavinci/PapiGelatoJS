@@ -10,10 +10,6 @@ function genBtn(number) {
         if (btn.style.background == "green") {
             btn.style.background = "red";
         } else if (btn.style.background == "red") {
-            btn.style.background = "purple";
-        } else if (btn.style.background == "purple") {
-            btn.style.background = "blue";
-        } else if (btn.style.background == "blue") {
             btn.style.background = "black";
         } else if (btn.style.background == "black") {
             btn.remove()

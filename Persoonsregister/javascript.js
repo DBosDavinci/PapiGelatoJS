@@ -22,3 +22,31 @@ fetch("opdracht2_bijlage.json")
             })
         }
     })
+
+function updateSite(form) {
+
+    fetch("opdracht2_bijlage.json")
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (data) {
+            data = JSON.parse(data)
+            for (i = 0; i < 7; i++) {
+                var persoon = data[i]
+                var filterAge = form.filterage.value;
+
+                if (persoon["leeftijd"] >= filterAge) {
+                    var list = document.createElement("ul");
+                    list.setAttribute("id", persoon["voornaam"])
+                    document.body.appendChild(list)
+                    var parse = Object.values(persoon)
+                    parse.forEach(function (item) {
+                        printdata(item, persoon["voornaam"])
+                    })
+                } else {
+                    continue
+                }
+            }
+        })
+
+}

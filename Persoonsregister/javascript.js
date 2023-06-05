@@ -1,16 +1,24 @@
-function printdata(index) {
+function printdata(info, persoon) {
     var listitem = document.createElement("li");
-    var text = document.createTextNode(index);
+    var text = document.createTextNode(info);
     listitem.appendChild(text);
-    document.getElementById("persoon").appendChild(listitem)
+    document.getElementById(persoon).appendChild(listitem)
 }
 
-fetch("opdracht1_bijlage.json")
+fetch("opdracht2_bijlage.json")
     .then(function (response) {
         return response.text();
     })
     .then(function (data) {
         data = JSON.parse(data)
-        var parse = Object.values(data)
-        parse.forEach(printdata)
+        for (i = 0; i < 7; i++) {
+            var persoon = data[i]
+            var list = document.createElement("ul");
+            list.setAttribute("id", persoon["voornaam"])
+            document.body.appendChild(list)
+            var parse = Object.values(persoon)
+            parse.forEach(function (item) {
+                printdata(item, persoon["voornaam"])
+            })
+        }
     })
